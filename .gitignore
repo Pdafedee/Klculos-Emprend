@@ -1,0 +1,32 @@
+# ============================================================
+#  Klculos-Emprend · .gitignore
+#  Protege tus datos privados y claves. NUNCA subas estas rutas.
+# ============================================================
+
+# --- Datos del negocio (van cifrados, pero son PRIVADOS) ---
+data/*
+!data/.gitkeep
+
+# --- Configuración con secretos (SMTP, OpenAI, bases de datos) ---
+config/settings.json
+
+# --- Entorno virtual (se recrea con instalar_windows.bat) ---
+venv/
+.venv/
+
+# --- Python: cachés y compilados ---
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# --- Empaquetado (flet pack / PyInstaller) ---
+build/
+dist/
+*.spec
+
+# --- Sistemas operativos y logs ---
+.DS_Store
+Thumbs.db
+*.log

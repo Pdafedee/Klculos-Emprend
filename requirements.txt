@@ -1,0 +1,15 @@
+# Klculos-Emprend · dependencias (sin Docker, Python 3.10–3.13)
+# Python 3.14: la app arranca igual, pero en modo navegador (rescate automático
+# de run.py); para la ventana nativa usa Python 3.12 dentro del venv.
+flet[desktop]>=0.25,<0.29 # interfaz dashboard (escritorio + web, misma base de código); [desktop] instala el cliente nativo compatible
+openai>=1.30              # motor IA híbrido (opcional en ejecución: si falta, usa el motor local)
+reportlab>=4.0            # exportación PDF
+python-docx>=1.1          # exportación DOC
+qrcode[pil]>=7.4          # códigos QR de validación
+cryptography>=42.0        # cifrado extremo a extremo (Fernet + PBKDF2)
+fastapi>=0.100,<0.116     # SERVIDOR WEB: Flet 0.28 no soporta fastapi ≥0.116
+                          # (error "openapi_prefix" en modo --web si falta)
+
+# --- Motores SQL opcionales (descomenta para activar la sincronización) ---
+# mysql-connector-python>=8.3
+# psycopg2-binary>=2.9
